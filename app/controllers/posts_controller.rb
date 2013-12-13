@@ -7,7 +7,8 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
 
-    respond_with @posts
+    # puts method(:respond_with).source_location
+    respond_with @posts #, responder: SpecialResponder
   end
 
   # GET /posts/1
